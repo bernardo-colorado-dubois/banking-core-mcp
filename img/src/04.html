@@ -1,0 +1,21 @@
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css"><style>
+.big{margin-top:52px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.big .card{padding:40px 34px;min-height:290px}
+.big .card .k{font-family:'JetBrains Mono';color:var(--accent);font-size:17px;font-weight:700;margin-bottom:14px;letter-spacing:.02em}
+.big .card h3{font-size:27px}
+.big .card p{font-size:22px}
+.quote{margin-top:56px;border-left:4px solid var(--accent);padding:6px 0 6px 28px;font-size:36px;font-weight:700;letter-spacing:-.02em;line-height:1.3}
+.quote em{font-style:normal;color:var(--accent)}
+</style></head><body>
+<div class="top"><span class="pill">SEGURIDAD</span><span class="page">4 / 4</span></div>
+<h1>La IA no se salta<br>el <em>RBAC.</em></h1>
+<p class="lead">El MCP es un cliente más. <b>Toda regla vive en el core</b>: el modelo solo puede hacer lo que el rol del usuario permite.</p>
+<div class="big">
+ <div class="card"><div class="k">BANKING_EMAIL</div><h3>Actúa como un usuario</h3><p>Un cliente ve solo sus cuentas; un operador, todas. El permiso se decide en el core, no en el prompt.</p></div>
+ <div class="card"><div class="k">ToolError("[403] …")</div><h3>Errores honestos</h3><p>El mensaje del core llega intacto al modelo, que lo explica en vez de inventar.</p></div>
+ <div class="card"><div class="k">^\d+(\.\d{1,2})?$</div><h3>Dinero sin float</h3><p>Los montos viajan como texto y el core los guarda en NUMERIC(18,2).</p></div>
+ <div class="card"><div class="k">401 → login → retry</div><h3>Sesión resiliente</h3><p>Si el JWT expira, el cliente vuelve a iniciar sesión y reintenta una vez.</p></div>
+</div>
+<div class="quote">Conversar con el banco, <em>sin darle llaves extra</em> a la IA.</div>
+<div class="foot"><span><b>Model Context Protocol</b> · FastMCP</span><span>Permisos, nunca prompts</span></div>
+</body></html>

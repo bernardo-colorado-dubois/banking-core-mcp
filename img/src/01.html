@@ -1,0 +1,27 @@
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css"><style>
+.stack{margin-top:52px;display:flex;flex-direction:column;align-items:stretch;gap:0}
+.node{display:flex;align-items:center;gap:26px;background:rgba(18,26,43,.9);border:1px solid var(--line);border-radius:22px;padding:24px 30px}
+.node.hl{border-color:rgba(52,211,153,.6);box-shadow:0 0 0 6px rgba(52,211,153,.06),0 0 60px rgba(52,211,153,.12)}
+.ic{width:66px;height:66px;border-radius:16px;display:grid;place-items:center;font-size:30px;font-weight:800;flex:none}
+.node h3{font-size:27px;font-weight:700}
+.node p{color:var(--muted);font-size:19px;margin-top:4px;line-height:1.4}
+.node .r{margin-left:auto;text-align:right}
+.link{display:flex;align-items:center;gap:18px;height:74px;padding-left:62px}
+.link .bar{width:3px;height:100%;background:linear-gradient(var(--accent),var(--blue))}
+.link span{font-family:'JetBrains Mono';font-size:18px;color:var(--muted)}
+.link span b{color:var(--accent)}
+</style></head><body>
+<div class="top"><span class="pill">MCP · BANKING CORE</span><span class="page">1 / 4</span></div>
+<h1>Mi core bancario ahora<br>habla con <em>una IA.</em></h1>
+<p class="lead">Un servidor <b>MCP</b> que expone la API del core como herramientas: Claude consulta saldos, abre cuentas y mueve dinero <b>con los mismos permisos</b> que el usuario que inició sesión.</p>
+<div class="stack">
+ <div class="node"><div class="ic" style="background:rgba(251,191,36,.12);color:var(--amber)">✦</div><div><h3>Claude / cliente MCP</h3><p>«Transfiere 1,500 pesos de Caja principal a la cuenta de Ana»</p></div></div>
+ <div class="link"><div class="bar"></div><span>stdio · <b>tools/call</b> transfer(...)</span></div>
+ <div class="node hl"><div class="ic" style="background:rgba(52,211,153,.12);color:var(--accent)">⌘</div><div><h3>banking-core-mcp <span class="tag">&nbsp;FASTMCP</span></h3><p>17 tools tipadas · valida montos · traduce errores del core</p></div><div class="r mono" style="color:var(--accent);font-size:44px;font-weight:700">17</div></div>
+ <div class="link"><div class="bar"></div><span>HTTP · <b>Authorization: Bearer &lt;JWT&gt;</b></span></div>
+ <div class="node"><div class="ic" style="background:rgba(96,165,250,.12);color:var(--blue)">◆</div><div><h3>Banking core <span class="tag">&nbsp;FLASK</span></h3><p>RBAC · partida doble · invariantes · bloqueo de filas</p></div></div>
+ <div class="link"><div class="bar" style="background:var(--blue)"></div><span>SQLAlchemy · <b>SELECT … FOR UPDATE</b></span></div>
+ <div class="node"><div class="ic" style="background:rgba(142,155,184,.12);color:var(--muted)">▤</div><div><h3>PostgreSQL 17</h3><p>Ledger inmutable · saldo calculado con una vista SQL</p></div></div>
+</div>
+<div class="foot"><span><b>Python</b> · FastMCP · httpx</span><span>Lenguaje natural → API → ledger</span></div>
+</body></html>

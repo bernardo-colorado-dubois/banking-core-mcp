@@ -1,0 +1,8 @@
+# Servidor MCP: tools, anotaciones y transporte stdio
+fastmcp==4.2.0
+
+# Cliente HTTP async para la API del core (se importa como httpx)
+httpx2==2.16.2
+
+# Carga de .env (BANKING_API_URL, BANKING_EMAIL, BANKING_PASSWORD)
+python-dotenv==1.2.4

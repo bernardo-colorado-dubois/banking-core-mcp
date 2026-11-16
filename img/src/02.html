@@ -1,0 +1,28 @@
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css"><style>
+.groups{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:44px}
+.g{background:rgba(18,26,43,.85);border:1px solid var(--line);border-radius:22px;padding:24px 26px}
+.g h3{font-size:15px;letter-spacing:.2em;color:var(--muted);font-weight:700;margin-bottom:16px;display:flex;justify-content:space-between}
+.t{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-top:1px solid rgba(36,48,73,.7);font-family:'JetBrains Mono';font-size:20px}
+.t:first-of-type{border-top:0}
+.d{width:13px;height:13px;border-radius:50%}
+.ro{background:var(--accent)}.wr{background:var(--blue)}.de{background:var(--red)}
+.legend{display:flex;gap:34px;margin-top:40px;color:var(--muted);font-size:19px}
+.legend span{display:flex;align-items:center;gap:10px}
+.legend b{color:var(--text);font-family:'JetBrains Mono';font-size:17px}
+</style></head><body>
+<div class="top"><span class="pill">HERRAMIENTAS</span><span class="page">2 / 4</span></div>
+<h1>Un endpoint,<br>una <em>herramienta.</em></h1>
+<p class="lead">Cada tool lleva <b>anotaciones MCP</b> que le dicen al modelo qué solo lee, qué escribe y qué mueve dinero de forma irreversible.</p>
+<div class="groups">
+ <div class="g"><h3>SESIÓN <span>3</span></h3>
+  <div class="t">login<i class="d wr"></i></div><div class="t">whoami<i class="d ro"></i></div><div class="t">change_password<i class="d wr"></i></div></div>
+ <div class="g"><h3>CUENTAS <span>5</span></h3>
+  <div class="t">list_accounts<i class="d ro"></i></div><div class="t">get_account_movements<i class="d ro"></i></div><div class="t">open_client_account<i class="d wr"></i></div><div class="t">open_vostro_account<i class="d wr"></i></div><div class="t">open_nostro_account<i class="d wr"></i></div></div>
+ <div class="g"><h3>USUARIOS <span>5</span></h3>
+  <div class="t">list_users<i class="d ro"></i></div><div class="t">get_user<i class="d ro"></i></div><div class="t">create_admin<i class="d wr"></i></div><div class="t">create_operator<i class="d wr"></i></div><div class="t">deactivate_user<i class="d de"></i></div></div>
+ <div class="g" style="border-color:rgba(248,113,113,.35)"><h3>OPERACIONES <span>4</span></h3>
+  <div class="t">deposit<i class="d wr"></i></div><div class="t">withdraw<i class="d de"></i></div><div class="t">transfer<i class="d de"></i></div><div class="t">reverse_transaction<i class="d de"></i></div></div>
+</div>
+<div class="legend"><span><i class="d ro"></i><b>readOnlyHint</b></span><span><i class="d wr"></i><b>write</b></span><span><i class="d de"></i><b>destructiveHint</b> → pide confirmación</span></div>
+<div class="foot"><span><b>17 tools</b> · NOSTRO y VOSTRO · MXN</span><span>@mcp.tool(annotations=…)</span></div>
+</body></html>
